@@ -1,0 +1,21 @@
+
+
+Description:
+This project would be a web app where people could view events in the areas around them. The events would be input by a user and other users could like the event and mark if they are attending.
+
+
+Minimum Viable Product:
+Users can register to add events however non registered users can view an all events page only
+Users can log in and out
+Users can create, delete and edit their own posts
+Users can like others event posts and mark if they are attending 
+Users can see a list of events they are attending in their dashboard
+Users can view an events details page and see what other users are going to attend
+
+Stretch Goals:
+Having protected and unprotected pages
+make unattending an event without deleting the event 
+requesting and having friends
+
+GitHub repo:
+https://github.com/ericrhorn/projects-and-algos
