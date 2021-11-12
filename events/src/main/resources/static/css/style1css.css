@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
+*{
+	/* margin: 5px; */
+	/* padding: 5px; */
+}
 
-table {
+body{
+	padding: 30px;
+}
+
+
+/* table {
   border-collapse: collapse;
   width: auto;
   text-align: left;
@@ -10,8 +19,8 @@ table {
 
 table, th, td {
   border: 1px solid black;
-  padding: 10px;
-}
+  padding: 100px;
+} */
 
 .nav{
 	padding-left: 400px;
@@ -69,8 +78,8 @@ body{
     width: 850px;
 }
 
-.btn {
+/* .btn {
 	display: inline-block;
 	justify-content: space-between;
 	
-}
+} */

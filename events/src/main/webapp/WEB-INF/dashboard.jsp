@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/css/style1css.css"/>
 <meta charset="UTF-8">
 <title>Dashboard</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 <div id="nav">
@@ -30,7 +31,8 @@
 	<div>
 		<h4>Here are the Events you are Attending</h4>
 	</div>
-	<table>
+	<div class="col-9">
+	<table class="table table-bordered table-sm">
 		<thead>
 			<tr>
 				<th>Event</th>
@@ -48,23 +50,27 @@
 			<c:when test="${events.userLikes.contains(user)}">
 			<tr>
 				<td><a href="/events/${events.id}">${events.newEvent}</a></td>
-				<td>${events.event_date}</td>
+				<td>${events.getEvent_dateFormatted()}</td>
 				<td>${events.location}</td>
 				<td>$${events.cost}</td>
 				<td>
 				<c:choose>
 				<c:when test="${events.user.id == user.id}">
-				<div class="btn">
+				<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+				<div >
 					<form action="/events/edit/${events.id}">
 				    <input type="submit" value="Edit"/>
 					</form>
 				</div>
-				<div class="btn">
+				<div >
 					<form action="/delete/${events.id}" method="post">
 					<input type="hidden" name="_method" value="delete">
-					<input type="submit" value="Delete">
+					<input class="btn btn-danger btn-sm" type="submit" value="Delete">
 					</form>
 				</div>
+				
+				</div>
+				
 				</c:when>
 				<c:otherwise>
 					Can't Delete
@@ -93,12 +99,16 @@
 		</c:forEach>
 		</tbody>
 	</table>
+	
+	</div>
+	
 </div>
 <div>
 	<div>
 		<h4>All Events</h4>
 	</div>
-	<table>
+	<div class="col-9">
+	<table class="table table-bordered">
 		<thead>
 			<tr>
 				<th>Created By</th>
@@ -122,23 +132,30 @@
 			<tr>
 				<td>${events.user.name}</td>
 				<td><a href="/events/${events.id}">${events.newEvent}</a></td>
-				<td>${events.event_date}</td>
+				<td>${events.getEvent_dateFormatted()}</td>
 				<td>${events.location}</td>
 				<td>$${events.cost}</td>
 				<td>
 				<c:choose>
 				<c:when test="${events.user.id == user.id}">
-				<div class="btn">
+				
+				<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+				<div>
 					<form action="/events/edit/${events.id}">
 				    <input type="submit" value="Edit"/>
 					</form>
 				</div>
-				<div class="btn">
+				<div>
 					<form action="/delete/${events.id}" method="post">
 					<input type="hidden" name="_method" value="delete">
-					<input type="submit" value="Delete">
+					<input class="btn btn-danger btn-sm" type="submit" value="Delete">
 					</form>
 				</div>
+				</div>
+				
+				
+				
+				
 				</c:when>
 				<c:otherwise>
 					Can't Delete
@@ -165,6 +182,7 @@
 		</c:forEach>
 		</tbody>
 	</table>
+	</div>
 </div>
 </body>
 </html>

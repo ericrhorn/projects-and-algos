@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/css/style1css.css"/>
 <meta charset="UTF-8">
 <title>Event Details</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 <div id="nav">
@@ -22,7 +23,7 @@
 </div>
 <h2>${event.newEvent}</h2>
 <p>Location: ${event.location}</p>
-<p>Date: ${event.event_date}</p>
+<p>Date: ${event.getEvent_dateFormatted()}</p>
 <p>Description:</p>
 <textarea rows="5" cols="35">${event.description}</textarea>
 <h3>Friends attending this event</h3>

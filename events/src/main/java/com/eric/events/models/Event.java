@@ -1,5 +1,6 @@
 package com.eric.events.models;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class Event {
 	@NotBlank(message="Must enter an event")
 	private String newEvent;
 	
-	@DateTimeFormat(pattern="YYYY-MM-dd")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
     private Date event_date;
 	
 	@NotBlank(message="Must enter a location")
@@ -82,6 +83,11 @@ public class Event {
 
 	public Date getEvent_date() {
 		return event_date;
+	}
+	
+	public String getEvent_dateFormatted() {
+		SimpleDateFormat fm = new SimpleDateFormat("MM/dd/yyyy");
+		return fm.format(this.event_date);
 	}
 
 	public void setEvent_date(Date event_date) {

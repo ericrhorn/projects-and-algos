@@ -1,0 +1,28 @@
+Text description of project with feature list for MVP:
+
+Our project will be React/MERN based and will consist of a chatroom platfrom where a logged in user will see a messageboard with a list of chatrooms (similar to Discord for Coding Dojo), select from an exsisting list of chatrooms to see messages from other users on and contirbute to the chatroom by adding a message, then being able to edit or delete an existing messages(from the logged in user only). 
+
+Feature list:
+Homepage listing list of chatrooms of Programming stack Languages to choose from (e.g. MERN, JAVA, Python, C++, etc.)
+Each Messageroom will include existing messages from users interacting with one another. 
+A logged in user will be able to add messages to existing chatroom along with making any edits to message (upon creation) or may delete any existing messages from user. 
+Each page will feature a Navbar that will redirect a user to either the homepage/messageboard. 
+
+Group members and their primary role on project.
+Eli: Tasked with Login/Registration component along with integration of backend for login/reg. and validations on all input fields. 
+Erik R: Tasked with setup of backend server along with setting up/facilitating GitHub repo. 
+Eric H:  Tasked with creating chatroom component that include CRUD commands.
+Angel: Tasked with creating the homepage/dashboard and Navbar for all pages along with CSS on all component files.
+
+Additional Feature(s): 
+
+Deployment, login/registration page with validations, existing users can only edit/delete their messages in a chatroom.  
+
+github link
+
+https://github.com/Ramirezerik/novGroupProject
+
+
+
+
+

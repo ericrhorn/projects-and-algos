@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/css/style1css.css"/>
 <meta charset="UTF-8">
 <title>Dashboard</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 <div id="nav">
@@ -26,7 +27,8 @@
 	<div>
 		<h4>Events in your area</h4>
 	</div>
-	<table>
+	<div class="col-9">
+	<table class="table table-bordered table-sm">
 		<thead>
 			<tr>
 				<th>Event</th>
@@ -40,13 +42,14 @@
 			<c:forEach items="${allEvents}" var ="events">
 			<tr>
 				<td>${events.newEvent}</td>
-				<td>${events.event_date}</td>
+				<td>${events.getEvent_dateFormatted()}</td>
 				<td>${events.location}</td>
 				<td>$${events.cost}</td>
 			</tr>
 		</c:forEach>
 		</tbody>
 	</table>
+	</div>
 </div>
 </body>
 </html>
